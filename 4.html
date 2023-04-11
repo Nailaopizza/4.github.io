@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML + CSS Form</title>
+  </head>
+  <body>
+    <form class="form">
+      <div class="form__header">
+        <h1>Анкета для приема в COA команду Identity V</h1>
+        <hr />
+      </div>
+      <div class="form__body">
+        <div class="form__col">
+          <div class="form__group">
+            <label for="nickname">Никнейм</label><br />
+            <input 
+              type="text" 
+              name="nickname" 
+              id="nickname" 
+              class="form__control" 
+              />
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label><br />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form__control"
+              placeholder="idv@netease.com"
+            />
+          </div>
+          <div class="form__group">
+            <label for="game_age">Сколько лет играете:</label><br />
+            <input
+              type="number"
+              name="game_age"
+              id="game_age"
+              min="0"
+              max="5"
+              class="form__control"
+            />
+          </div>
+        </div>
+        <div class="form__col">
+          <div class="form__group">
+            <label for="age">Дата рождения:</label><br />
+            <input 
+              type="date" 
+              name="age" 
+              id="age"  
+              class="form__control" 
+              />
+          </div>
+          <div class="form__group">
+            <label for="faction">Фракция</label><br />
+            <select name="faction" id="faction">
+                <option value="1">Выберите фракцию...</option>
+                <option value="2">Выживший</option>
+                <option value="3">Охотник</option>
+            </select>
+          </div>
+          <div class="form__group">
+            <label for="city">Город</label><br />
+            <input 
+              type="text" 
+              name="city" 
+              id="city" 
+              class="form__control" 
+              />
+          </div>
+        </div>
+        <div class="form__group">
+            <label for="main_char">Ваш мейн</label><br />
+            <input 
+              type="text" 
+              name="main_char" 
+              id="main_char" 
+              class="form__control" 
+            />
+          </div>
+        <div class="form__col">
+          <div class="form__group">
+            <label for="bio">О себе</label><br />
+            <textarea
+              name="bio"
+              id="bio"
+              cols="30"
+              rows="10"
+              class="form__control form__control--grow"
+            ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="form__footer">
+        <div class="form__checkbox">
+          <input type="checkbox" name="backup" id="backup" />
+          <label for="backup" class="form__checkbox--label">Я хочу быть запасным в команде</label>
+        </div>
+      </div>
+      <button type="submit" class="form__submit">
+        Отправить
+      </button>      
+    </form>
+  </body>
+</html>
